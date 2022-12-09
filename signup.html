@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+  <head>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/balloon.png">
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../css/theme.css">
+
+   <style>
+
+/* inter-300 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+</style>
+
+  </head>
+
+  <body class="d-flex h-100 w-100" data-bs-spy="scroll" data-bs-target="#navScroll">
+
+    <div class="h-100 container-fluid">
+      <div class="h-100 row d-flex align-items-stretch">
+        
+          <div class="col-12 col-md-7 col-lg-6 d-flex align-items-start flex-column px-vw-5">
+          
+            <main class="mb-auto col-12">
+              <br><br><br>
+              <h1>Register a new account</h1>
+              
+<form class="row" action="http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com:8080/usr/local/tomcat9/webapps/llj/signup.jsp">
+  <div class="col-12 col-lg-10 col-xl-8">
+  <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" name="umail">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="userid" class="form-label">Nick name</label>
+    <input type="text" class="form-control form-control-lg" name="uname">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control form-control-lg" name="upw1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control form-control-lg" name="upw2">
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">User type</label>
+    <select class="search__input" name="usertype">
+      <option>Host</option>
+      <option>Guest</option>
+    </select>
+  </div>
+  <button type="submit" class="out-btn" onclick ="location.href='read.html'">Submit</button>
+</div>
+</form>
+
+            </main>
+          </div>
+          
+            <div class="col-12 col-md-5 col-lg-6 bg-cover" style="background-image: url('../images/background.jpg');"></div>
+          
+        </div>
+      </div></body>
+</html>

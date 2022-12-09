@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/background.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/balloon.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>게시글 생성</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* inter-300 - latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/inter-v12-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-300.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/inter-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-500.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/inter-v12-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-700.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  </style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
+  <header>
+    <nav>
+        <div>
+            <ul class="menu">
+            <li><a href="http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com/var/www/html/index.html" font-size:3em>Home</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="menu">
+                <li><a href="http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com/var/www/html/create.html">글쓰기</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com/var/www/html/index.html">로그아웃</a></li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+  <main>
+  <form action="http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com:8080/usr/local/tomcat9/webapps/llj/create.jsp" method="post">
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+      <div class="container">
+        <div class="row d-flex justify-content-end">
+          <div class="col-lg-8 aos-init">
+            <h2 class="display-6">  행사 간단 코멘트 넣기 </h2>
+          </div>
+        </div>
+    
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6 col-lg-4 aos-init" data-aos-delay="200">
+            <span class="h5 fw-lighter">01.행사 일정</span>
+            <div>시작일 <input  type="date" placeholder="mm/dd/yyyy" name="start_date"></div>
+            <div>종료일 <input  type="date" placeholder="mm/dd/yyyy" name="end_date"></div>
+            <br>
+            <span class="h5 fw-lighter">02.행사 장소 </span><br>
+            <select class="region__input" name="region" charset="utf-8">
+              <option>서울</option>
+              <option>부산</option>
+              <option>대구</option>
+              <option>인천</option>
+              <option>광주</option>
+              <option>대전</option>
+              <option>울산</option>
+              <option>세종</option>
+              <option>경기</option>
+              <option>강원</option>
+              <option>충북</option>
+              <option>충남</option>
+              <option>전북</option>
+              <option>전남</option>
+              <option>경북</option>
+              <option>경남</option>
+              <option>제주</option>
+            </select>
+            <br>
+            <div><input type="text" placeholder="상세 주소" name="dregion"></div>
+            <br>
+            <span class="h5 fw-lighter">03.행사 타입 </span><br>
+            <select class="region__input" name="type">
+              <option>프리마켓</option>
+              <option>야시장</option>
+              <option>공연</option>
+            </select>
+            <br>
+           
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4 py-vh-4 pb-0 aos-init">
+
+            
+            </a>
+          </div>
+
+          
+        </div>
+        
+
+      </div>
+    </div>
+
+    <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+      <div class="container">
+
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <div class="row gx-5 d-flex">
+              <div class="col-md-11">
+                <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" name="image"/>
+                <div id="image_container"></div>
+            
+                <script>
+                  function setThumbnail(event) {
+                    for (var image of event.target.files) {
+                      var reader = new FileReader();
+            
+                      reader.onload = function(event) {
+                        var img = document.createElement("img");
+                        img.setAttribute("src", event.target.result);
+                        document.querySelector("div#image_container").appendChild(img);
+                      };
+            
+                      console.log(image);
+                      reader.readAsDataURL(image);
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="py-5 border-top border-dark aos-init" data-aos="fade-left">행사 설명<br></h3>
+            
+            <div class="form-group mt-4">
+              <textarea class="form-control" id="title" name="title" rows="1" placeholder="제목"></textarea>
+              <br>
+              <textarea class="form-control" id="message" name="body" rows="12" placeholder="행사 소개글 작성"></textarea>
+            </div>
+            <br>
+            <button class="booking-btn">요청</button>
+            <button class="booking-btn">취소</button>
+            <p>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+
+
+
+
+  </main>  
+
+  <script>
+    AOS.init({
+      duration: 800, // values from 0 to 3000, with step 50ms
+    });
+  </script>
+
+  <script>
+    let scrollpos = window.scrollY;
+    const header = document.querySelector(".navbar");
+    const header_height = header.offsetHeight;
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
+
+    window.addEventListener('scroll', function () {
+      scrollpos = window.scrollY;
+
+      if (scrollpos >= header_height) { add_class_on_scroll(); }
+      else { remove_class_on_scroll(); }
+
+      console.log(scrollpos);
+    })
+  </script>
+
+
+
+</body>
+</html>
