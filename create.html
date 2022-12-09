@@ -87,7 +87,7 @@
             <div>종료일 <input  type="date" placeholder="mm/dd/yyyy" name="end_date"></div>
             <br>
             <span class="h5 fw-lighter">02.행사 장소 </span><br>
-            <select class="region__input" name="region" charset="utf-8">
+            <select class="region__input" name="region" charset="utf-8" style="ime-mode:active;">
               <option>서울</option>
               <option>부산</option>
               <option>대구</option>
@@ -107,10 +107,10 @@
               <option>제주</option>
             </select>
             <br>
-            <div><input type="text" placeholder="상세 주소" name="dregion"></div>
+            <div><input type="text" placeholder="상세 주소" name="dregion" style="ime-mode:active;"></div>
             <br>
             <span class="h5 fw-lighter">03.행사 타입 </span><br>
-            <select class="region__input" name="type">
+            <select class="region__input" name="type" >
               <option>프리마켓</option>
               <option>야시장</option>
               <option>공연</option>
@@ -166,9 +166,9 @@
             <h3 class="py-5 border-top border-dark aos-init" data-aos="fade-left">행사 설명<br></h3>
             
             <div class="form-group mt-4">
-              <textarea class="form-control" id="title" name="title" rows="1" placeholder="제목"></textarea>
+              <textarea class="form-control" id="title" name="title" rows="1" placeholder="제목" style="ime-mode:active;"></textarea>
               <br>
-              <textarea class="form-control" id="message" name="body" rows="12" placeholder="행사 소개글 작성"></textarea>
+              <textarea class="form-control" id="message" name="body" rows="12" placeholder="행사 소개글 작성" style="ime-mode:active;"></textarea>
             </div>
             <br>
             <button class="booking-btn">요청</button>
