@@ -298,7 +298,7 @@
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
         var mmember = getParameterByName('member');
-        var url = 'http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com/mypage.jsp?member='+mmember;
+        var url = 'https://www.haengsa.kro.kr/mypage.jsp?member='+mmember;
 
         axios.get(url)
             .then((res) => {

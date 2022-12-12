@@ -196,7 +196,7 @@
                 <h4 class="modal-title">예약</h4>
 
             </div>
-            <form class="modal-body" id="bookingForm" action="http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com/booking.jsp">
+            <form class="modal-body" id="bookingForm" action="https://www.haengsa.kro.kr/booking.jsp">
               <input type="hidden" name="booking_title" id="booking_title"  />
               <div class="form-group">
                 <span class="form-label">{{행사 이름}}</span>
@@ -256,7 +256,7 @@
     }
 
 	var btitle = getParameterByName('title');
-  var url = 'http://llj-web-lb-15022402-b5dd0ab26565.kr.lb.naverncp.com/read.jsp?title='+btitle;
+  var url = 'https://www.haengsa.kro.kr/read.jsp?title='+btitle;
 
     
     axios.get(url)
