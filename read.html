@@ -65,7 +65,7 @@
     <nav>
       <div>
         <ul class="menu">
-          <li><a href="#" font-size:3em>Home</a></li>
+          <li><a href="https://www.haengsa.kro.kr" font-size:3em>Home</a></li>
         </ul>
       </div>
       <div>
@@ -92,7 +92,7 @@
             
 
             <button class="booking-btn" id="booking">예약</button>
-            <button class="booking-btn" id="recommend">추천</button>
+            <button class="booking-btn" id="recommend" onclick="delete_click();">삭제</button>
           </div>
         </div>
       </div>
@@ -198,13 +198,11 @@
             </div>
             <form class="modal-body" id="bookingForm" action="https://www.haengsa.kro.kr/booking.jsp">
               <input type="hidden" name="booking_title" id="booking_title"  />
-              <div class="form-group">
-                <span class="form-label">{{행사 이름}}</span>
+	      <div class="form-group">
+                  <h3><div class="row" id="board_ttitle"></div></h3>
                 <p>
-                  {{지역}}
-                </p>
-                <p>
-                  {{행사날짜}}
+                  <div class="row" id="board_ssdate"></div>
+                  ~<div class="row" id="board_eedate"></div>
                 </p>
               </div>
               <div class="row">
@@ -232,7 +230,6 @@
               </div>
               <div class="modal-footer">
                 <button class="btn btn-primary" type="submit">예약</button>
-                <button type="button" class="btn btn-primary">저장</button>
                 <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" id="cancle">취소</button> 
               </div>
             </form>
@@ -257,8 +254,12 @@
 
 	var btitle = getParameterByName('title');
   var url = 'https://www.haengsa.kro.kr/read.jsp?title='+btitle;
+  var url2 = 'https://www.haengsa.kro.kr/delete.jsp?title='+btitle;
 
     
+	function delete_click() {
+		location.href=url2;
+	}
     axios.get(url)
             .then((res) => {
 
@@ -276,6 +277,11 @@
                     document.getElementById('path1').innerHTML += '<div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end aos-init" data-aos="fade-right" style="background-image: url('+json[i].path2+');--bs-aspect-ratio: 50%;"></div>';
                     document.getElementById('path2').innerHTML += '<div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end aos-init" data-aos="fade-up" style="background-image: url('+json[i].path3+');--bs-aspect-ratio: 50%;"></div>';
                     document.getElementById('path3').innerHTML += '<div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center aos-init" data-aos="fade-left" style="background-image: url('+json[i].path4+');--bs-aspect-ratio: 50%;"></div>';
+                    document.getElementById('board_ttitle').innerHTML += '<p>'+json[i].title+'</p>';
+                    document.getElementById('board_ssdate').innerHTML += '<p>'+json[i].sdate+'</p>';
+                    document.getElementById('board_eedate').innerHTML += '<p>'+json[i].edate+'</p>';
+                    document.getElementById('board_rregion').innerHTML += '<p>'+json[i].region+'</p>';
+                    document.getElementById('board_ddregion').innerHTML += '<p>'+json[i].dregion+'</p>';
                   }
 
             })

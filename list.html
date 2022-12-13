@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/balloon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>축제 목록</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css" integrity="sha256-G3IAYJYIQvZgPksNQDbjvxd/Ca1SfCDFwu2s2lt0oGo=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul class="menu">
+                <li><a href="https://www.haengsa.kro.kr" font-size:3em>Home</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="menu">
+                    <li><a href="https://www.haengsa.kro.kr/create.html">글쓰기</a></li>
+                    <li><a href="https://www.haengsa.kro.kr/mypage.html">마이페이지</a></li>
+                    <li><a href="https://www.haengsa.kro.kr/logout.jsp">로그아웃</a></li>
+                </ul>
+            </div>
+        </nav>
+      </header>
+
+    <div class="container container-categorized-index">
+        <br>
+        <h5 class="container-headline">축제 목록</h5>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button class="btn-filter active" data-toggle="modal" data-target="#section-filter">
+                    <!-- filter가 적용되어 있다면 btn-filter에 active 클레스를 추가해주세요.-->
+                    <i class="material-icons ic-filter">filter_list</i>
+                </button>
+            </li>
+
+        </ul>
+
+        <ul class="list-products row" id="board_card">
+        </ul>
+    </div>
+
+
+    <div class="modal fade" id="section-filter" tabindex="-1" role="dialog" data-controller="design" data-action="modal_example" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-filter" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">필터</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group filter_list">
+                        <label>지역</label>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_1" value="option1">
+                            <label class="form-check-label" for="formcheckboxregion_1">
+                                서울/경기/인천
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_2" value="option2">
+                            <label class="form-check-label" for="formcheckboxregion_2">
+                                부산/울산/경남
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_3" value="option3">
+                            <label class="form-check-label" for="formcheckboxregion_3">
+                                대구/경북
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_4" value="option4">
+                            <label class="form-check-label" for="formcheckboxregion_4">
+                                충청/대전/세종
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_5" value="option5">
+                            <label class="form-check-label" for="formcheckboxregion_5">
+                                전라/광주
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_6" value="option6">
+                            <label class="form-check-label" for="formcheckboxregion_6">
+                                강원
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="formcheckboxregion" id="formcheckboxregion_7" value="option7">
+                            <label class="form-check-label" for="formcheckboxregion_7">
+                                제주
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group filter_list">
+                        <label>일시</label>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="formRadiosDate" id="formRadiosDate_1" value="option1">
+                            <label class="form-check-label" for="formRadiosDate_1">
+                                모든날
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="formRadiosDate" id="formRadiosDate_2" value="option2">
+                            <label class="form-check-label" for="formRadiosDate_2">
+                                오늘
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="formRadiosDate" id="formRadiosDate_3" value="option3">
+                            <label class="form-check-label" for="formRadiosDate_3">
+                                이번주
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="formRadiosDate" id="formRadiosDate_3" value="option3">
+                            <label class="form-check-label" for="formRadiosDate_3">
+                                이번달
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mr-auto">초기화</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">적용</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.js" integrity="sha256-59/apVFrosMLFX2dHZLGvb3nPpu7e0Yx1rsDr1dTRrk=" crossorigin="anonymous"></script>
+    <script>
+        // With JQuery
+        $("#sliderCarModelYear").slider({min: 2010, max: 2020, value: [2010, 2020], focus: true});
+        $("#sliderCarMileage").slider({min: 0, max: 10000, value: [0, 10000], focus: true});
+        $('#myModal').modal(options)
+    </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+  var url = 'https://www.haengsa.kro.kr/list.jsp';
+
+    
+    axios.get(url)
+            .then((res) => {
+
+                var json = res.data;
+                console.log(json);
+                for (var i = 0; i < json.length; i++) {
+                    document.getElementById('board_card').innerHTML += '<li class="list-products-item col-12 col-md-4 col-lg-3"><a href="https://www.haengsa.kro.kr/read.html?title='+json[i].title+'"><div class="card"><div class="card-img-top" style="background: url(\''+json[i].path1+'\') no-repeat center; background-size: cover; height: 240px"></div><div class="card-body"><h5>'+json[i].title+'</h5><h6>'+json[i].region+'</h6><div class="text-muted"><h7>'+json[i].sdate+'</h7><br><h7>~'+json[i].edate+'</h7></div></div></div></a></li>'
+                }
+
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+  </script>
+</body>
+</html>

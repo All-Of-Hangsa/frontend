@@ -14,7 +14,7 @@
         <nav>
             <div>
                 <ul class="menu">
-                <li><a href="https://www.haengsa.kro.kr/login.html" font-size:3em>Home</a></li>
+                <li><a href="https://www.haengsa.kro.kr" font-size:3em>Home</a></li>
                 </ul>
             </div>
             <div>
@@ -26,7 +26,7 @@
                         <button class="btn btn-primary" type="submit">마이페이지</button>
                     </form>
                     </li>
-                    <li><button class="btn btn-primary" type="submit" OnClick="location.href = 'https://www.haengsa.kro.kr/index.html'">로그아웃</button></li>                </ul>
+                    <li><button class="btn btn-primary" type="submit" OnClick="location.href = 'https://www.haengsa.kro.kr/logout.jsp'">로그아웃</button></li>                </ul>
             </div>
         </nav>
     </header>
@@ -39,8 +39,8 @@
         <section class="sec">
             <div class="sec-container">
                 <hr>
-                <form class="sub-form" action="#">
-                    <div><input type="text" placeholder=" 검색 " name="search"></div>
+                <form class="sub-form" action="https://www.haengsa.kro.kr/read.html" method="get">
+                    <div><input type="text" placeholder=" 검색 " name="title"></div>
                     <div><input type="date" placeholder="mm/dd/yyyy" name="date"></div>
                     <div><input type="region" placeholder="지역" name="region"></div>
                     <div><button type="submit"><i class="material-icons" style="font-size:40px">search</i></button></div>
@@ -52,8 +52,8 @@
        
         <section class="sec">
             <div class="sec-container">
-                <div class="sec-title">
-                    야시장 {{ Random 지역 }}
+                <div class="sec-title" OnClick="location.href='https://www.haengsa.kro.kr/list.html?btype=야시장'" style="cursor:pointer;">
+                    야시장
                 </div>
                 <div class="category2-box">
                     <div>
@@ -76,8 +76,8 @@
         </section>
         <section class="sec">
             <div class="sec-container">
-                <div class="sec-title">
-                    프리마켓 {{ random 지역 }}
+                <div class="sec-title" OnClick="location.href='https://www.haengsa.kro.kr/list.html?btype=프리마켓'" style="cursor:pointer;">
+                    프리마켓
                 </div>
                 <div class="category2-box">
                     <div>
@@ -98,8 +98,8 @@
         </section>
         <section class="sec">
             <div class="sec-container">
-                <div class="sec-title">
-                    공연 {{ Random 지역 }}
+                <div class="sec-title" OnClick="location.href='https://www.haengsa.kro.kr/list.html?btype=공연'" style="cursor:pointer;">
+                    공연
                 </div>
                 <div class="category2-box">
                     <div>
